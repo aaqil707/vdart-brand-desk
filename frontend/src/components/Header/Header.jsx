@@ -2,7 +2,8 @@
  * Header — Top navigation bar with glassmorphism and 3D depth.
  */
 import { motion } from 'framer-motion';
-import { LogOut, Shield, HelpCircle } from 'lucide-react';
+import { LogOut, HelpCircle } from 'lucide-react';
+import logoPng from '../../assets/logo.png';
 import { useAuthStore } from '../../store';
 import './Header.css';
 
@@ -27,7 +28,7 @@ export default function Header() {
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
             <div className="brand-icon">
-              <Shield size={22} />
+              <img src={logoPng} className="brand-icon-img" alt="Logo" />
             </div>
             <div>
               <h1 className="brand-title">VDart Brand Desk</h1>

@@ -7,7 +7,7 @@
  *  3. React renders LinkedIn-style preview with downloadable assets
  *  4. User selects headline, about, experience text and copies to clipboard
  */
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { generateProfile } from '../../api/profileApi';
 import { ENTITY_CONTENT } from '../../data/entityContent';
@@ -124,8 +124,12 @@ export default function ProfileGenerator({ entity, onBack }) {
   const content = ENTITY_CONTENT[entity.id] || ENTITY_CONTENT.vdart;
 
   // Upload state
-  const [uploadMethod, setUploadMethod] = useState('manual');
-  const [employeeId, setEmployeeId] = useState('');
+  const [uploadMethod, setUploadMethod] = useState(() => {
+    return sessionStorage.getItem('profGenMethod') || 'manual';
+  });
+  const [employeeId, setEmployeeId] = useState(() => {
+    return sessionStorage.getItem('profGenEmpId') || '';
+  });
   const [selectedFile, setSelectedFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [dragActive, setDragActive] = useState(false);
@@ -134,12 +138,49 @@ export default function ProfileGenerator({ entity, onBack }) {
   // Generation state
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState('');
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState(() => {
+    const saved = sessionStorage.getItem('profGenResult');
+    return saved ? JSON.parse(saved) : null;
+  });
 
   // Content selection state
-  const [selectedHeadline, setSelectedHeadline] = useState('');
-  const [selectedAbout, setSelectedAbout] = useState('');
-  const [selectedExperience, setSelectedExperience] = useState('');
+  const [selectedHeadline, setSelectedHeadline] = useState(() => {
+    return sessionStorage.getItem('profGenHeadline') || '';
+  });
+  const [selectedAbout, setSelectedAbout] = useState(() => {
+    return sessionStorage.getItem('profGenAbout') || '';
+  });
+  const [selectedExperience, setSelectedExperience] = useState(() => {
+    return sessionStorage.getItem('profGenExp') || '';
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem('profGenMethod', uploadMethod);
+  }, [uploadMethod]);
+
+  useEffect(() => {
+    sessionStorage.setItem('profGenEmpId', employeeId);
+  }, [employeeId]);
+
+  useEffect(() => {
+    if (result) {
+      sessionStorage.setItem('profGenResult', JSON.stringify(result));
+    } else {
+      sessionStorage.removeItem('profGenResult');
+    }
+  }, [result]);
+
+  useEffect(() => {
+    sessionStorage.setItem('profGenHeadline', selectedHeadline);
+  }, [selectedHeadline]);
+
+  useEffect(() => {
+    sessionStorage.setItem('profGenAbout', selectedAbout);
+  }, [selectedAbout]);
+
+  useEffect(() => {
+    sessionStorage.setItem('profGenExp', selectedExperience);
+  }, [selectedExperience]);
 
   // Instruction panel state
   const [showInstructions, setShowInstructions] = useState(false);
@@ -224,6 +265,12 @@ export default function ProfileGenerator({ entity, onBack }) {
     setSelectedAbout('');
     setSelectedExperience('');
     setEmployeeId('');
+    sessionStorage.removeItem('profGenMethod');
+    sessionStorage.removeItem('profGenEmpId');
+    sessionStorage.removeItem('profGenResult');
+    sessionStorage.removeItem('profGenHeadline');
+    sessionStorage.removeItem('profGenAbout');
+    sessionStorage.removeItem('profGenExp');
   };
 
   // ── Render ──

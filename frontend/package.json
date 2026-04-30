@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "typescript": "~6.0.2",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "vite-plugin-svgr": "^5.2.0"
   },
   "dependencies": {
     "@fontsource/inter": "^5.2.8",

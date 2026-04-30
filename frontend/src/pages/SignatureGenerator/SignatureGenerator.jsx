@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -78,17 +78,36 @@ export default function SignatureGenerator({ entity, onBack }) {
 
   const config = SIGNATURE_CONFIG[entity.id] || SIGNATURE_CONFIG['vdart'];
 
-  const [activeTab, setActiveTab] = useState('outlook');
+  const [activeTab, setActiveTab] = useState(() => {
+    return sessionStorage.getItem('sigGenTab') || 'outlook';
+  });
   const [showInstructions, setShowInstructions] = useState(false);
   const [instrTab, setInstrTab] = useState('outlook');
-  const [isGenerated, setIsGenerated] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    title: '',
-    phone: '',
-    email: '',
-    linkedin: ''
+  const [isGenerated, setIsGenerated] = useState(() => {
+    return sessionStorage.getItem('sigGenGenerated') === 'true';
   });
+  const [formData, setFormData] = useState(() => {
+    const saved = sessionStorage.getItem('sigGenFormData');
+    return saved ? JSON.parse(saved) : {
+      name: '',
+      title: '',
+      phone: '',
+      email: '',
+      linkedin: ''
+    };
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem('sigGenTab', activeTab);
+  }, [activeTab]);
+
+  useEffect(() => {
+    sessionStorage.setItem('sigGenGenerated', isGenerated);
+  }, [isGenerated]);
+
+  useEffect(() => {
+    sessionStorage.setItem('sigGenFormData', JSON.stringify(formData));
+  }, [formData]);
 
   const previewRef = useRef(null);
 
@@ -113,6 +132,20 @@ export default function SignatureGenerator({ entity, onBack }) {
     if (formData.name && formData.title && formData.phone && formData.email) {
       setIsGenerated(true);
     }
+  };
+
+  const handleReset = () => {
+    setFormData({
+      name: '',
+      title: '',
+      phone: '',
+      email: '',
+      linkedin: ''
+    });
+    setIsGenerated(false);
+    sessionStorage.removeItem('sigGenTab');
+    sessionStorage.removeItem('sigGenGenerated');
+    sessionStorage.removeItem('sigGenFormData');
   };
 
   const copyToClipboard = async () => {
@@ -348,17 +381,27 @@ export default function SignatureGenerator({ entity, onBack }) {
 
             {/* Generate Button */}
             <div className="sig-gen__actions">
-              <button
-                type="button"
-                className="btn btn-primary sig-gen__generate-btn"
-                onClick={handleGenerate}
-                disabled={!isFormFilled}
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                Generate Signature
-              </button>
+               <button
+                 type="button"
+                 className="btn btn-primary sig-gen__generate-btn"
+                 onClick={handleGenerate}
+                 disabled={!isFormFilled}
+               >
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                   <polyline points="20 6 9 17 4 12" />
+                 </svg>
+                 Generate Signature
+               </button>
+               {isGenerated && (
+                 <button 
+                   className="btn btn-secondary" 
+                   onClick={handleReset} 
+                   type="button" 
+                   style={{ marginLeft: '10px' }}
+                 >
+                   Start Over
+                 </button>
+               )}
             </div>
           </motion.div>
 

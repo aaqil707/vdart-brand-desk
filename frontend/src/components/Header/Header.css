@@ -37,17 +37,13 @@
   gap: var(--space-3);
   cursor: default;
 }
-
-.brand-icon {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gradient-brand);
-  border-radius: var(--radius-md);
-  color: white;
-  box-shadow: 0 4px 12px rgba(64,112,244,0.3);
+header.app-header.glass-dark{
+  padding: 16px 10px;
+}
+.brand-icon-img {
+  width: 90px;
+  height: 45px;
+  object-fit: contain;
 }
 
 .brand-title {

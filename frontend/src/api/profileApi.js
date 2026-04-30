@@ -21,9 +21,19 @@ export async function generateProfile(file, entity, uploadMethod = 'manual', emp
     body: formData,
   });
 
-  if (!response.ok) {
-    throw new Error(`Server error: ${response.status}`);
-  }
+  const responseText = await response.text();
 
-  return response.json();
+  try {
+    const data = JSON.parse(responseText);
+    if (!response.ok) {
+      throw new Error(data.message || `Server error: ${response.status}`);
+    }
+    return data;
+  } catch (error) {
+    console.error("Failed to parse JSON. Raw server response:", responseText);
+    if (error instanceof SyntaxError) {
+      throw new Error("The server encountered an error and returned an invalid response. Check console for details.");
+    }
+    throw error;
+  }
 }

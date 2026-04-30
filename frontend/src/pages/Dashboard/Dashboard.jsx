@@ -4,7 +4,7 @@
  * LinkedIn profile generation now routes to the React ProfileGenerator
  * instead of the legacy PHP pages.
  */
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -53,7 +53,28 @@ export default function Dashboard() {
   const [guidelineType, setGuidelineType] = useState('email');
 
   // When set, we show the React ProfileGenerator or SignatureGenerator instead of the dashboard
-  const [activeGenerator, setActiveGenerator] = useState(null);
+  const [activeGenerator, setActiveGenerator] = useState(() => {
+    const saved = sessionStorage.getItem('activeGenerator');
+    if (!saved) return null;
+    try {
+      const { type, entityId } = JSON.parse(saved);
+      const entity = ENTITIES.find((e) => e.id === entityId);
+      return entity ? { type, entity } : null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  useEffect(() => {
+    if (activeGenerator) {
+      sessionStorage.setItem(
+        'activeGenerator',
+        JSON.stringify({ type: activeGenerator.type, entityId: activeGenerator.entity.id }),
+      );
+    } else {
+      sessionStorage.removeItem('activeGenerator');
+    }
+  }, [activeGenerator]);
 
   const handleEntityClick = (entity) => {
     setSelectedEntity(entity);
