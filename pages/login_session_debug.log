@@ -1,0 +1,1398 @@
+2025-05-05 19:29:36 - LOGINVAL - Before processing - SESSION: Array
+(
+)
+
+2025-05-05 19:29:36 - Login success - SESSION after adding notification: Array
+(
+    [user_id] => 1
+    [name] => Saranraj
+    [email] => saranraj.s@vdartinc.com
+    [loggedin] => 1
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [message] => Welcome back, Saranraj! You've successfully logged in.
+                    [type] => success
+                    [duration] => 5000
+                )
+
+        )
+
+)
+
+2025-05-05 19:30:17 - LOGINVAL - Before processing - SESSION: Array
+(
+    [user_id] => 1
+    [name] => Saranraj
+    [email] => saranraj.s@vdartinc.com
+    [loggedin] => 1
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [message] => Welcome back, Saranraj! You've successfully logged in.
+                    [type] => success
+                    [duration] => 5000
+                )
+
+        )
+
+)
+
+2025-05-05 19:30:17 - Login success - SESSION after adding notification: Array
+(
+    [user_id] => 1
+    [name] => Saranraj
+    [email] => saranraj.s@vdartinc.com
+    [loggedin] => 1
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [message] => Welcome back, Saranraj! You've successfully logged in.
+                    [type] => success
+                    [duration] => 5000
+                )
+
+            [1] => Array
+                (
+                    [message] => Welcome back, Saranraj! You've successfully logged in.
+                    [type] => success
+                    [duration] => 5000
+                )
+
+        )
+
+)
+
+2025-05-05 19:30:41 - LOGINVAL - Before processing - SESSION: Array
+(
+)
+
+2025-05-05 19:30:41 - Login failure - SESSION after adding notification: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [message] => ⚠️ Invalid password. Please try again or reset your password.
+                    [type] => error
+                    [duration] => 5000
+                )
+
+        )
+
+)
+
+2025-05-05 19:31:10 - LOGINVAL - Before processing - SESSION: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [message] => ⚠️ Invalid password. Please try again or reset your password.
+                    [type] => error
+                    [duration] => 5000
+                )
+
+        )
+
+)
+
+2025-05-05 19:31:10 - Login success - SESSION after adding notification: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [message] => ⚠️ Invalid password. Please try again or reset your password.
+                    [type] => error
+                    [duration] => 5000
+                )
+
+            [1] => Array
+                (
+                    [message] => Welcome back, Saranraj! You've successfully logged in.
+                    [type] => success
+                    [duration] => 5000
+                )
+
+        )
+
+    [user_id] => 1
+    [name] => Saranraj
+    [email] => saranraj.s@vdartinc.com
+    [loggedin] => 1
+)
+
+2025-05-05 19:46:02 - LOGINVAL - Before processing - SESSION: Array
+(
+    [user_logged_in] => 1
+    [user_email] => nancy.m@vdartinc.com
+    [user_name] => Nebula Nancy Siron MK
+    [user_is_admin] => 
+    [dashboard_data] => Array
+        (
+            [currentWeek] => Array
+                (
+                    [dateRange] => April 1 - April 17, 2025
+                    [rm] => Array
+                        (
+                            [totalActive] => 596
+                            [totalInactive] => 152
+                            [totalOverall] => 599
+                            [engagementLevel] => 268
+                            [rukzanaAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => TechM
+                                            [candidates] => 68
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Apexon
+                                            [candidates] => 15
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => Hexaware
+                                            [candidates] => 26
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => UST Global
+                                            [candidates] => 7
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [rukzanaTotal] => 116
+                            [nancyAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => HCL
+                                            [candidates] => 184
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Cognizant
+                                            [candidates] => 55
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => RHT
+                                            [candidates] => 48
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [nancyTotal] => 287
+                            [leoAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Accenture
+                                            [candidates] => 54
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Avanade
+                                            [candidates] => 46
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => NTT Data
+                                            [candidates] => 94
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [leoTotal] => 194
+                            [issues] => Array
+                                (
+                                )
+
+                        )
+
+                    [rd] => Array
+                        (
+                            [activeCandidates] => 532
+                            [talentBench] => 739
+                            [inactive] => 0
+                            [clientSubmissions] => Array
+                                (
+                                    [total] => 231
+                                    [swarna] => 229
+                                    [lyn] => 0
+                                )
+
+                            [starts] => Array
+                                (
+                                    [total] => 4
+                                    [swarna] => 4
+                                    [lyn] => 0
+                                )
+
+                            [closures] => 6
+                        )
+
+                    [csm] => Array
+                        (
+                            [platforms] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Glassdoor
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Indeed
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => AmbitionBox
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => Google
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                )
+
+                            [totalPositive] => 0
+                            [totalNegative] => 0
+                            [unsubscribes] => Array
+                                (
+                                    [total] => 0
+                                    [reasons] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [reason] => Service quality issues
+                                                    [count] => 0
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [reason] => Found alternative solution
+                                                    [count] => 0
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [reason] => Budget constraints
+                                                    [count] => 0
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [reason] => Business closure
+                                                    [count] => 0
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [projects] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => Vdart Brand Hub
+                                    [status] => Completed
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                            [1] => Array
+                                (
+                                    [name] => NPS Survey Rollout
+                                    [status] => In Progess 
+                                    [completion] => 50
+                                    [team] => CX Team
+                                )
+
+                            [2] => Array
+                                (
+                                    [name] => Candidate Engagement Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [3] => Array
+                                (
+                                    [name] => Google Review Tracker
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [4] => Array
+                                (
+                                    [name] => Recruiter QA Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [5] => Array
+                                (
+                                    [name] => VDart Career Portal Form
+                                    [status] => Completed 
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                        )
+
+                )
+
+            [previousWeek] => Array
+                (
+                    [dateRange] => April 1 - April 17, 2025
+                    [rm] => Array
+                        (
+                            [totalActive] => 596
+                            [totalInactive] => 152
+                            [totalOverall] => 599
+                            [engagementLevel] => 268
+                            [rukzanaAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => TechM
+                                            [candidates] => 68
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Apexon
+                                            [candidates] => 15
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => Hexaware
+                                            [candidates] => 26
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => UST Global
+                                            [candidates] => 7
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [rukzanaTotal] => 116
+                            [nancyAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => HCL
+                                            [candidates] => 184
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Cognizant
+                                            [candidates] => 55
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => RHT
+                                            [candidates] => 48
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [nancyTotal] => 287
+                            [leoAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Accenture
+                                            [candidates] => 54
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Avanade
+                                            [candidates] => 46
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => NTT Data
+                                            [candidates] => 94
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [leoTotal] => 194
+                            [issues] => Array
+                                (
+                                )
+
+                        )
+
+                    [rd] => Array
+                        (
+                            [activeCandidates] => 532
+                            [talentBench] => 739
+                            [inactive] => 0
+                            [clientSubmissions] => Array
+                                (
+                                    [total] => 231
+                                    [swarna] => 229
+                                    [lyn] => 0
+                                )
+
+                            [starts] => Array
+                                (
+                                    [total] => 4
+                                    [swarna] => 4
+                                    [lyn] => 0
+                                )
+
+                            [closures] => 6
+                        )
+
+                    [csm] => Array
+                        (
+                            [platforms] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Glassdoor
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Indeed
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => AmbitionBox
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => Google
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                )
+
+                            [totalPositive] => 0
+                            [totalNegative] => 0
+                            [unsubscribes] => Array
+                                (
+                                    [total] => 0
+                                    [reasons] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [reason] => Service quality issues
+                                                    [count] => 0
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [reason] => Found alternative solution
+                                                    [count] => 0
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [reason] => Budget constraints
+                                                    [count] => 0
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [reason] => Business closure
+                                                    [count] => 0
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [projects] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => Vdart Brand Hub
+                                    [status] => Completed
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                            [1] => Array
+                                (
+                                    [name] => NPS Survey Rollout
+                                    [status] => In Progess 
+                                    [completion] => 50
+                                    [team] => CX Team
+                                )
+
+                            [2] => Array
+                                (
+                                    [name] => Candidate Engagement Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [3] => Array
+                                (
+                                    [name] => Google Review Tracker
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [4] => Array
+                                (
+                                    [name] => Recruiter QA Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [5] => Array
+                                (
+                                    [name] => VDart Career Portal Form
+                                    [status] => Completed 
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [dataUploaded] => 1
+)
+
+2025-05-05 19:46:02 - Login success - SESSION after adding notification: Array
+(
+    [user_logged_in] => 1
+    [user_email] => nancy.m@vdartinc.com
+    [user_name] => Nebula Nancy Siron MK
+    [user_is_admin] => 
+    [dashboard_data] => Array
+        (
+            [currentWeek] => Array
+                (
+                    [dateRange] => April 1 - April 17, 2025
+                    [rm] => Array
+                        (
+                            [totalActive] => 596
+                            [totalInactive] => 152
+                            [totalOverall] => 599
+                            [engagementLevel] => 268
+                            [rukzanaAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => TechM
+                                            [candidates] => 68
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Apexon
+                                            [candidates] => 15
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => Hexaware
+                                            [candidates] => 26
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => UST Global
+                                            [candidates] => 7
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [rukzanaTotal] => 116
+                            [nancyAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => HCL
+                                            [candidates] => 184
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Cognizant
+                                            [candidates] => 55
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => RHT
+                                            [candidates] => 48
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [nancyTotal] => 287
+                            [leoAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Accenture
+                                            [candidates] => 54
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Avanade
+                                            [candidates] => 46
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => NTT Data
+                                            [candidates] => 94
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [leoTotal] => 194
+                            [issues] => Array
+                                (
+                                )
+
+                        )
+
+                    [rd] => Array
+                        (
+                            [activeCandidates] => 532
+                            [talentBench] => 739
+                            [inactive] => 0
+                            [clientSubmissions] => Array
+                                (
+                                    [total] => 231
+                                    [swarna] => 229
+                                    [lyn] => 0
+                                )
+
+                            [starts] => Array
+                                (
+                                    [total] => 4
+                                    [swarna] => 4
+                                    [lyn] => 0
+                                )
+
+                            [closures] => 6
+                        )
+
+                    [csm] => Array
+                        (
+                            [platforms] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Glassdoor
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Indeed
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => AmbitionBox
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => Google
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                )
+
+                            [totalPositive] => 0
+                            [totalNegative] => 0
+                            [unsubscribes] => Array
+                                (
+                                    [total] => 0
+                                    [reasons] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [reason] => Service quality issues
+                                                    [count] => 0
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [reason] => Found alternative solution
+                                                    [count] => 0
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [reason] => Budget constraints
+                                                    [count] => 0
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [reason] => Business closure
+                                                    [count] => 0
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [projects] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => Vdart Brand Hub
+                                    [status] => Completed
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                            [1] => Array
+                                (
+                                    [name] => NPS Survey Rollout
+                                    [status] => In Progess 
+                                    [completion] => 50
+                                    [team] => CX Team
+                                )
+
+                            [2] => Array
+                                (
+                                    [name] => Candidate Engagement Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [3] => Array
+                                (
+                                    [name] => Google Review Tracker
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [4] => Array
+                                (
+                                    [name] => Recruiter QA Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [5] => Array
+                                (
+                                    [name] => VDart Career Portal Form
+                                    [status] => Completed 
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                        )
+
+                )
+
+            [previousWeek] => Array
+                (
+                    [dateRange] => April 1 - April 17, 2025
+                    [rm] => Array
+                        (
+                            [totalActive] => 596
+                            [totalInactive] => 152
+                            [totalOverall] => 599
+                            [engagementLevel] => 268
+                            [rukzanaAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => TechM
+                                            [candidates] => 68
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Apexon
+                                            [candidates] => 15
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => Hexaware
+                                            [candidates] => 26
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => UST Global
+                                            [candidates] => 7
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [rukzanaTotal] => 116
+                            [nancyAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => HCL
+                                            [candidates] => 184
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Cognizant
+                                            [candidates] => 55
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => RHT
+                                            [candidates] => 48
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [nancyTotal] => 287
+                            [leoAccounts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Accenture
+                                            [candidates] => 54
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Avanade
+                                            [candidates] => 46
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => NTT Data
+                                            [candidates] => 94
+                                            [issues] => Array
+                                                (
+                                                )
+
+                                        )
+
+                                )
+
+                            [leoTotal] => 194
+                            [issues] => Array
+                                (
+                                )
+
+                        )
+
+                    [rd] => Array
+                        (
+                            [activeCandidates] => 532
+                            [talentBench] => 739
+                            [inactive] => 0
+                            [clientSubmissions] => Array
+                                (
+                                    [total] => 231
+                                    [swarna] => 229
+                                    [lyn] => 0
+                                )
+
+                            [starts] => Array
+                                (
+                                    [total] => 4
+                                    [swarna] => 4
+                                    [lyn] => 0
+                                )
+
+                            [closures] => 6
+                        )
+
+                    [csm] => Array
+                        (
+                            [platforms] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [name] => Glassdoor
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [name] => Indeed
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [name] => AmbitionBox
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [name] => Google
+                                            [positive] => 0
+                                            [negative] => 0
+                                        )
+
+                                )
+
+                            [totalPositive] => 0
+                            [totalNegative] => 0
+                            [unsubscribes] => Array
+                                (
+                                    [total] => 0
+                                    [reasons] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [reason] => Service quality issues
+                                                    [count] => 0
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [reason] => Found alternative solution
+                                                    [count] => 0
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [reason] => Budget constraints
+                                                    [count] => 0
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [reason] => Business closure
+                                                    [count] => 0
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [projects] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => Vdart Brand Hub
+                                    [status] => Completed
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                            [1] => Array
+                                (
+                                    [name] => NPS Survey Rollout
+                                    [status] => In Progess 
+                                    [completion] => 50
+                                    [team] => CX Team
+                                )
+
+                            [2] => Array
+                                (
+                                    [name] => Candidate Engagement Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [3] => Array
+                                (
+                                    [name] => Google Review Tracker
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [4] => Array
+                                (
+                                    [name] => Recruiter QA Portal
+                                    [status] => Not Started
+                                    [completion] => 0
+                                    [team] => CX and Delivery
+                                )
+
+                            [5] => Array
+                                (
+                                    [name] => VDart Career Portal Form
+                                    [status] => Completed 
+                                    [completion] => 100
+                                    [team] => CX and Delivery
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [dataUploaded] => 1
+    [user_id] => 24
+    [name] => Nebula Nancy Siron MK
+    [email] => nancy.m@vdartinc.com
+    [loggedin] => 1
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [id] => notification_6819157a0b053
+                    [message] => Welcome back, Nebula Nancy Siron MK! You've successfully logged in.
+                    [type] => success
+                )
+
+        )
+
+)
+
+2025-05-05 19:48:29 - LOGINVAL - Before processing - SESSION: Array
+(
+)
+
+2025-05-05 19:48:29 - Login failure - SESSION after adding notification: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [id] => notification_6819160d5f7ed
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+        )
+
+)
+
+2025-05-05 19:48:37 - LOGINVAL - Before processing - SESSION: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [id] => notification_6819160d5f7ed
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+        )
+
+)
+
+2025-05-05 19:48:37 - Login failure - SESSION after adding notification: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [id] => notification_6819160d5f7ed
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+            [1] => Array
+                (
+                    [id] => notification_68191615c3105
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+        )
+
+)
+
+2025-05-05 19:48:54 - LOGINVAL - Before processing - SESSION: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [id] => notification_6819160d5f7ed
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+            [1] => Array
+                (
+                    [id] => notification_68191615c3105
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+            [2] => Array
+                (
+                    [id] => notification_68191621e0f09
+                    [message] => Password must be at least 8 characters long.
+                    [type] => warning
+                )
+
+        )
+
+)
+
+2025-05-05 19:48:54 - Login failure - SESSION after adding notification: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [id] => notification_6819160d5f7ed
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+            [1] => Array
+                (
+                    [id] => notification_68191615c3105
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+            [2] => Array
+                (
+                    [id] => notification_68191621e0f09
+                    [message] => Password must be at least 8 characters long.
+                    [type] => warning
+                )
+
+            [3] => Array
+                (
+                    [id] => notification_68191626e4e9d
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+        )
+
+)
+

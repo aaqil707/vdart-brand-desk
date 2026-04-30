@@ -1,0 +1,22 @@
+2025-05-05 19:48:49 - REGISTER - Start - SESSION: Array
+(
+    [notifications] => Array
+        (
+            [0] => Array
+                (
+                    [id] => notification_6819160d5f7ed
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+            [1] => Array
+                (
+                    [id] => notification_68191615c3105
+                    [message] => ⚠️ Invalid email address. Please check your email or sign up for an account.
+                    [type] => error
+                )
+
+        )
+
+)
+
