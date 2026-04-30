@@ -5,7 +5,15 @@
  */
 header('Content-Type: application/json');
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/error_log.txt');
+
+if (!extension_loaded('gd')) {
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'GD library is not enabled on the server.']);
+    exit;
+}
 
 // Ensure directories exist
 foreach (['uploads', 'output', 'employee_photos', 'banners'] as $dir) {

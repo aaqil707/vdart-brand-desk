@@ -766,7 +766,7 @@ export default function ProfileGenerator({ entity, onBack }) {
             className="profile-gen__cta-action"
             onClick={() => {
               setShowInstructions(true);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.scrollTo({ top: 10, behavior: 'smooth' });
             }}
             type="button"
           >
