@@ -375,7 +375,7 @@ export default function ProfileGenerator({ entity, onBack }) {
           </AnimatePresence>
         </motion.div>
 
-        <div className="profile-gen__grid">
+        <div className="profile-gen__top-row">
           {/* ── Left: Upload Form ── */}
           <motion.div
             className="profile-gen__form card"
@@ -575,179 +575,266 @@ export default function ProfileGenerator({ entity, onBack }) {
             </div>
           </motion.div>
 
-          {/* ── Right: Preview ── */}
+          {/* ── Right: Features Section ── */}
           <motion.div
-            className="profile-gen__preview card"
+            className="features-section"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="profile-gen__section-title">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
+            {/* Upload Card */}
+            <div className="feature-card card">
+              <div className="card-content">
+              
+                <i className="fas fa-upload feature-icon">
+                   <svg  class="rr" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="17 8 12 3 7 8" />
+                <line x1="12" y1="3" x2="12" y2="15" />
               </svg>
-              LinkedIn Preview
-            </h3>
-
-            {!result ? (
-              <div className="profile-gen__empty-preview">
-                <div className="profile-gen__empty-icon">
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-gray-300)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
+                </i>
+                  
+                <div className="feature-title">Easy Upload</div>
+                <div className="feature-description">
+                  <ul className="feature-list">
+                    <li><i className="fas fa-check"></i> Drag and drop functionality</li>
+                    <li><i className="fas fa-check"></i> Supports JPG, PNG, GIF formats</li>
+                    <li><i className="fas fa-check"></i> Quick upload process</li>
+                    <li><i className="fas fa-check"></i> Auto-size optimization</li>
+                  </ul>
                 </div>
-                <p>Upload a photo and click <strong>Generate</strong> to see your LinkedIn preview</p>
               </div>
-            ) : (
-              <div className="linkedin-preview">
-                {/* Banner */}
-                <div className="linkedin-banner">
-                  <img src={result.banner} alt="LinkedIn Banner" />
+            </div>
+
+            {/* Not Recommended Card */}
+            <div className="feature-card card">
+              <div className="card-content">
+                <div className="status-badge not-recommended">
+                  <i className="fas fa-times-circle"></i>
+                  Not Recommended
+                </div>
+                <div className="image-container">
+                  <img src="/img/Business.jpg" alt="Not Recommended" className="feature-image" />
+                </div>
+                <div className="feature-title">Avoid This Format</div>
+                <div className="feature-description">Poor quality image with distracting background.</div>
+              </div>
+            </div>
+
+            {/* Recommended Card */}
+            <div className="feature-card card">
+              <div className="card-content">
+                <div className="status-badge recommended">
+                  <i className="fas fa-check-circle"></i>
+                  Professional Standard
+                </div>
+                <div className="image-container">
+                  <img src="/img/Business1.jpg" alt="Recommended" className="feature-image" />
+                </div>
+                <div className="feature-title">Perfect Format</div>
+                <div className="feature-description">High resolution with clean background.</div>
+              </div>
+            </div>
+
+            {/* Background Removal Card */}
+            <div className="feature-card card">
+              <div className="card-content">
+                <i className="fas fa-magic feature-icon">
+                  <svg  class="rr" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 3v18" />
+                    <path d="M16.5 4.5L7.5 19.5" />
+                    <path d="M19.5 6.5L4.5 17.5" />
+                  </svg>
+                </i>
+                <div className="feature-title">Remove Background</div>
+                <div className="feature-description">
+                  <ul className="feature-list">
+                    <li><i className="fas fa-check"></i> Professional appearance</li>
+                    <li><i className="fas fa-check"></i> Clean, distraction-free look</li>
+                    <li><i className="fas fa-check"></i> Enhanced focus on subject</li>
+                    <li><i className="fas fa-check"></i> Perfect for branding</li>
+                  </ul>
+                </div>
+                <a href="https://www.remove.bg/" target="_blank" rel="noreferrer" className="bg-remove-link">
+                  Try remove.bg <i className="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* ── Bottom: Preview ── */}
+        <motion.div
+          className="profile-gen__preview card"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <h3 className="profile-gen__section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+            LinkedIn Preview
+          </h3>
+
+          {!result ? (
+            <div className="profile-gen__empty-preview">
+              <div className="profile-gen__empty-icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-gray-300)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+              </div>
+              <p>Upload a photo and click <strong>Generate</strong> to see your LinkedIn preview</p>
+            </div>
+          ) : (
+            <div className="linkedin-preview">
+              {/* Banner */}
+              <div className="linkedin-banner">
+                <img src={result.banner} alt="LinkedIn Banner" />
+                <a
+                  href={result.banner}
+                  download
+                  className="linkedin-download-btn banner-dl"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Save Banner
+                </a>
+
+                {/* Profile Photo */}
+                <div className="linkedin-profile-photo">
+                  <img src={result.profile} alt="Generated Profile" />
                   <a
-                    href={result.banner}
+                    href={result.profile}
                     download
-                    className="linkedin-download-btn banner-dl"
+                    className="linkedin-download-btn photo-dl"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                       <polyline points="7 10 12 15 17 10" />
                       <line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
-                    Save Banner
                   </a>
+                </div>
+              </div>
 
-                  {/* Profile Photo */}
-                  <div className="linkedin-profile-photo">
-                    <img src={result.profile} alt="Generated Profile" />
-                    <a
-                      href={result.profile}
-                      download
-                      className="linkedin-download-btn photo-dl"
-                    >
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                        <polyline points="7 10 12 15 17 10" />
-                        <line x1="12" y1="15" x2="12" y2="3" />
-                      </svg>
-                    </a>
-                  </div>
+              {/* Content */}
+              <div className="linkedin-content">
+                <div className="linkedin-name">John Doe</div>
+
+                {/* Headline */}
+                <LinkedInSection
+                  title="Headline"
+                  icon={
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+                      <line x1="7" y1="7" x2="7.01" y2="7" />
+                    </svg>
+                  }
+                  selectedValue={selectedHeadline}
+                  placeholder="Select your professional headline"
+                  groups={content.headlines}
+                  onChange={setSelectedHeadline}
+                />
+
+                {/* Location */}
+                <div className="linkedin-location">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>{content.location}</span>
+                  <CopyButton text={content.location} />
                 </div>
 
-                {/* Content */}
-                <div className="linkedin-content">
-                  <div className="linkedin-name">John Doe</div>
+                {/* LinkedIn Action Buttons (decorative) */}
+                <div className="linkedin-action-btns">
+                  <span className="linkedin-action-btn primary">Open to</span>
+                  <span className="linkedin-action-btn secondary">Add profile section</span>
+                  <span className="linkedin-action-btn secondary">More</span>
+                </div>
 
-                  {/* Headline */}
-                  <LinkedInSection
-                    title="Headline"
-                    icon={
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
-                        <line x1="7" y1="7" x2="7.01" y2="7" />
-                      </svg>
-                    }
-                    selectedValue={selectedHeadline}
-                    placeholder="Select your professional headline"
-                    groups={content.headlines}
-                    onChange={setSelectedHeadline}
-                  />
-
-                  {/* Location */}
-                  <div className="linkedin-location">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                      <circle cx="12" cy="10" r="3" />
+                {/* About */}
+                <LinkedInSection
+                  title="About"
+                  icon={
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="12" y1="16" x2="12" y2="12" />
+                      <line x1="12" y1="8" x2="12.01" y2="8" />
                     </svg>
-                    <span>{content.location}</span>
-                    <CopyButton text={content.location} />
-                  </div>
+                  }
+                  selectedValue={selectedAbout}
+                  placeholder="Select your professional summary"
+                  groups={content.aboutSections}
+                  onChange={setSelectedAbout}
+                  helpSteps={[
+                    'Choose a template matching your role',
+                    'Add specific achievements and metrics',
+                    'Keep it concise (3-5 sentences)',
+                    'Include relevant keywords',
+                    'Highlight your expertise areas',
+                  ]}
+                />
 
-                  {/* LinkedIn Action Buttons (decorative) */}
-                  <div className="linkedin-action-btns">
-                    <span className="linkedin-action-btn primary">Open to</span>
-                    <span className="linkedin-action-btn secondary">Add profile section</span>
-                    <span className="linkedin-action-btn secondary">More</span>
-                  </div>
-
-                  {/* About */}
-                  <LinkedInSection
-                    title="About"
-                    icon={
+                {/* Experience */}
+                <div className="linkedin-experience">
+                  <div className="linkedin-section-header">
+                    <h4>
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <line x1="12" y1="16" x2="12" y2="12" />
-                        <line x1="12" y1="8" x2="12.01" y2="8" />
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
                       </svg>
-                    }
-                    selectedValue={selectedAbout}
-                    placeholder="Select your professional summary"
-                    groups={content.aboutSections}
-                    onChange={setSelectedAbout}
-                    helpSteps={[
-                      'Choose a template matching your role',
-                      'Add specific achievements and metrics',
-                      'Keep it concise (3-5 sentences)',
-                      'Include relevant keywords',
-                      'Highlight your expertise areas',
-                    ]}
-                  />
+                      Experience
+                    </h4>
+                  </div>
 
-                  {/* Experience */}
-                  <div className="linkedin-experience">
-                    <div className="linkedin-section-header">
-                      <h4>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-                        </svg>
-                        Experience
-                      </h4>
+                  <div className="linkedin-experience-card">
+                    <img
+                      src={content.experience.logoUrl}
+                      alt={content.experience.companyName}
+                      className="linkedin-company-logo"
+                    />
+                    <div className="linkedin-experience-info">
+                      <h5>Job Title</h5>
+                      <div className="linkedin-company-name">{content.experience.companyFullName}</div>
+                      <div className="linkedin-exp-meta">Oct 2024 – Present · 5 mos</div>
+                      <div className="linkedin-exp-meta">Tiruchirappalli, Tamil Nadu, India · On-site</div>
                     </div>
+                  </div>
 
-                    <div className="linkedin-experience-card">
-                      <img
-                        src={content.experience.logoUrl}
-                        alt={content.experience.companyName}
-                        className="linkedin-company-logo"
-                      />
-                      <div className="linkedin-experience-info">
-                        <h5>Job Title</h5>
-                        <div className="linkedin-company-name">{content.experience.companyFullName}</div>
-                        <div className="linkedin-exp-meta">Oct 2024 – Present · 5 mos</div>
-                        <div className="linkedin-exp-meta">Tiruchirappalli, Tamil Nadu, India · On-site</div>
-                      </div>
+                  <select
+                    className="linkedin-dropdown"
+                    value={selectedExperience}
+                    onChange={(e) => setSelectedExperience(e.target.value)}
+                  >
+                    <option value="" disabled>Select your role description</option>
+                    <option value={content.experience.description}>Standard Description</option>
+                  </select>
+
+                  {selectedExperience && (
+                    <div className="linkedin-display-box">
+                      <p style={{ whiteSpace: 'pre-line' }}>{selectedExperience}</p>
+                      <CopyButton text={selectedExperience} />
                     </div>
+                  )}
 
-                    <select
-                      className="linkedin-dropdown"
-                      value={selectedExperience}
-                      onChange={(e) => setSelectedExperience(e.target.value)}
-                    >
-                      <option value="" disabled>Select your role description</option>
-                      <option value={content.experience.description}>Standard Description</option>
-                    </select>
-
-                    {selectedExperience && (
-                      <div className="linkedin-display-box">
-                        <p style={{ whiteSpace: 'pre-line' }}>{selectedExperience}</p>
-                        <CopyButton text={selectedExperience} />
-                      </div>
-                    )}
-
-                    <div className="linkedin-skills-notice">
-                      <span>⚠️</span>
-                      <span>Please add a brief description of your role under the LinkedIn Experience section and copy-paste the content above.</span>
-                    </div>
+                  <div className="linkedin-skills-notice">
+                    <span>⚠️</span>
+                    <span>Please add a brief description of your role under the LinkedIn Experience section and copy-paste the content above.</span>
                   </div>
                 </div>
               </div>
-            )}
-          </motion.div>
-        </div>
+            </div>
+          )}
+        </motion.div>
       </main>
 
       {/* ── CTA Banner — LinkedIn Update Prompt ── */}

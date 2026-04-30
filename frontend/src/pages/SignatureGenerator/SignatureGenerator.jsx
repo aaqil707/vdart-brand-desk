@@ -82,6 +82,7 @@ export default function SignatureGenerator({ entity, onBack }) {
     return sessionStorage.getItem('sigGenTab') || 'outlook';
   });
   const [showInstructions, setShowInstructions] = useState(false);
+  const instructionsRef = useRef(null);
   const [instrTab, setInstrTab] = useState('outlook');
   const [isGenerated, setIsGenerated] = useState(() => {
     return sessionStorage.getItem('sigGenGenerated') === 'true';
@@ -205,6 +206,7 @@ export default function SignatureGenerator({ entity, onBack }) {
 
         {/* ── Instruction Content Block ── */}
         <motion.div
+          ref={instructionsRef}
           className="sig-gen__instructions card"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -651,20 +653,26 @@ export default function SignatureGenerator({ entity, onBack }) {
             <span className="sig-gen__cta-question">Need help setting up your email signature?</span>
             <span className="sig-gen__cta-hint">Follow our step-by-step guides for Outlook and CEIPAL</span>
           </div>
-          <button
-            className="sig-gen__cta-action"
-            onClick={() => {
-              setShowInstructions(true);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            type="button"
-          >
-            View Instructions
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </button>
+           <button
+             className="sig-gen__cta-action"
+             onClick={() => {
+               setShowInstructions(true);
+               
+               setTimeout(() => {
+                 instructionsRef.current?.scrollIntoView({ 
+                   behavior: 'smooth', 
+                   block: 'start' 
+                 });
+               }, 100);
+             }}
+             type="button"
+           >
+             View Instructions
+             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+               <line x1="5" y1="12" x2="19" y2="12" />
+               <polyline points="12 5 19 12 12 19" />
+             </svg>
+           </button>
         </div>
       </div>
 
